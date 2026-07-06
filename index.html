@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="is">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Tilraun.is - persónulegt smíðaverkstæði fyrir vefverkefni, sjálfhýstar lausnir og tilraunir." />
+  <title>Tilraun.is | Digital Workshop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="noise"></div>
+  <div class="orb orb-one"></div>
+  <div class="orb orb-two"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Tilraun.is heim">
+      <span class="brand-mark">t</span><span>tilraun.is</span>
+    </a>
+    <nav class="nav" aria-label="Aðalleiðsögn">
+      <a href="#projects">Verkefni</a>
+      <a href="#lab">Lab</a>
+      <a href="#stack">Stack</a>
+      <a href="#terminal">Terminal</a>
+    </nav>
+    <a class="header-button" href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+  </header>
+
+  <main id="top">
+    <section class="hero section-shell">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">Self-hosted / Open source / Automation</p>
+        <h1>Tilraunir. Hugmyndir. <span>Verk að veruleika.</span></h1>
+        <p class="hero-text">Persónulegt smíðaverkstæði fyrir vefverkefni, sjálfhýstar lausnir og tæknitilraunir. Hér safna ég saman því sem ég er að byggja, prófa og þróa.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#projects">Skoða verkefni</a>
+          <a class="button ghost" href="#lab">Opna lab</a>
+        </div>
+        <div class="mini-links" aria-label="Tenglar">
+          <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="mailto:hello@tilraun.is">Email</a>
+          <a href="#terminal">Terminal</a>
+        </div>
+      </div>
+
+      <div class="hero-panel reveal">
+        <div class="monitor-card">
+          <div class="window-bar"><span></span><span></span><span></span></div>
+          <pre><code>const tilraun = {
+  domain: "tilraun.is",
+  mode: "digital workshop",
+  hosting: "self-hosted",
+  status: "building"
+}
+
+run(tilraun)</code></pre>
+        </div>
+        <div class="server-card">
+          <div class="server-line"><span class="pulse"></span> Unraid</div>
+          <div class="server-line"><span class="pulse"></span> Docker</div>
+          <div class="server-line warning"><span></span> Lab</div>
+          <div class="server-line"><span class="pulse"></span> NPM</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats section-shell reveal" aria-label="Staða verkefna">
+      <article><strong data-count="14">0</strong><span>Projects</span></article>
+      <article><strong data-count="7">0</strong><span>Online</span></article>
+      <article><strong data-count="31">0</strong><span>Containers</span></article>
+      <article><strong data-count="124">0</strong><span>Commits</span></article>
+    </section>
+
+    <section id="projects" class="section-shell section-block">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Verkefni</p>
+        <h2>Það sem er í smíðum</h2>
+        <p>Veldu flokk eða smelltu á verkefni til að sjá nánari upplýsingar.</p>
+      </div>
+      <div class="filters reveal" role="list" aria-label="Verkefnasíur">
+        <button class="filter active" data-filter="all">Allt</button>
+        <button class="filter" data-filter="live">Live</button>
+        <button class="filter" data-filter="progress">Í vinnslu</button>
+        <button class="filter" data-filter="concept">Concept</button>
+      </div>
+      <div class="project-grid reveal" id="projectGrid"></div>
+    </section>
+
+    <section id="lab" class="section-shell lab section-block reveal">
+      <div>
+        <p class="eyebrow">Lab</p>
+        <h2>Self-hosted flæðið</h2>
+        <p>Hugmyndin er að tilraun.is verði inngangurinn inn í verkefnin þín: demo, status, docs og self-hosted þjónustur.</p>
+      </div>
+      <div class="flow">
+        <div>Internet</div><span></span><div>Cloudflare</div><span></span><div>NPM</div><span></span><div>Docker</div><span></span><div>App</div>
+      </div>
+    </section>
+
+    <section id="stack" class="section-shell section-block">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Stack</p>
+        <h2>Byggt á opnum lausnum</h2>
+      </div>
+      <div class="stack-grid reveal">
+        <div>Unraid</div><div>Docker</div><div>Nginx Proxy Manager</div><div>Cloudflare</div>
+        <div>Uptime Kuma</div><div>Home Assistant</div><div>PostgreSQL</div><div>Gitea</div>
+      </div>
+    </section>
+
+    <section id="terminal" class="section-shell terminal-section section-block reveal">
+      <div class="terminal-header">
+        <span></span><span></span><span></span>
+        <p>tilraun-terminal</p>
+      </div>
+      <div class="terminal-output" id="terminalOutput">
+        <p><span>&gt;</span> skrifaðu <strong>help</strong>, <strong>projects</strong>, <strong>status</strong>, <strong>lab</strong> eða <strong>sudo</strong></p>
+      </div>
+      <form class="terminal-form" id="terminalForm">
+        <label for="terminalInput">&gt;</label>
+        <input id="terminalInput" type="text" autocomplete="off" placeholder="help" />
+      </form>
+    </section>
+  </main>
+
+  <div class="modal" id="projectModal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <button class="modal-close" id="modalClose" aria-label="Loka">×</button>
+      <p class="eyebrow" id="modalStatus"></p>
+      <h2 id="modalTitle"></h2>
+      <p id="modalDescription"></p>
+      <div class="modal-actions">
+        <a class="button primary" id="modalDemo" href="#">Skoða demo</a>
+        <a class="button ghost" id="modalGithub" href="#">GitHub</a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer section-shell">
+    <strong>tilraun.is</strong>
+    <p>Tilraunir í dag, lausnir á morgun.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
